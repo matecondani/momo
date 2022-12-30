@@ -2,8 +2,6 @@ package ar.com.momo.monster.mobile.config;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.MethodArgumentNotValidException;
-import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
@@ -13,10 +11,6 @@ import ar.com.momo.monster.mobile.model.exceptions.EntityExistsException;
 import ar.com.momo.monster.mobile.model.exceptions.InternalServerException;
 import ar.com.momo.monster.mobile.model.exceptions.NotFoundException;
 import ar.com.momo.monster.mobile.model.exceptions.UnauthorizedException;
-import jakarta.validation.ConstraintDefinitionException;
-import jakarta.validation.ConstraintViolationException;
-import jakarta.validation.ValidationException;
-
 
 /**
  * Global Exception Handler, will catch errors and throw custom ApiError

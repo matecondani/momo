@@ -42,10 +42,10 @@ public class ApiError {
 
     @Override
     public String toString() {
-        return "{"
-            + "\"status\":\"" + status + "\""
-            + ", \"message\":\"" + message + "\""
-            + ", \"error\":\"" + error + "\""
-            + "}";
+        return "ApiError{" +
+            "status=" + status +
+            ", message='" + message + '\'' +
+            ", error='" + error + '\'' +
+            '}';
     }
 }

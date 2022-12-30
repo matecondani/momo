@@ -8,5 +8,7 @@ import  ar.com.momo.monster.mobile.model.entity.User;
 
 @Repository
 public interface IUserRepository extends MongoRepository<User, String> {
+
     Optional<User> findByName (String username);
+
 }

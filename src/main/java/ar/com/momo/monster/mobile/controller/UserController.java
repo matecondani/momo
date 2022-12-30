@@ -26,7 +26,7 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<?> createUser(@RequestBody @Valid UserCreationDTO userCreationDTO){
+    public ResponseEntity<?> createUser(@RequestBody @Valid UserCreationDTO userCreationDTO) {
         return userService.createUser(userCreationDTO);
     }
 
@@ -50,5 +50,5 @@ public class UserController {
     public ResponseEntity<?> deleteUserByName(@PathVariable(value = "name") String name,
                                               @RequestBody @Valid UserCreationDTO userCreationDTO) {
         return userService.updateUser(name, userCreationDTO);
-        }
+    }
 }

@@ -51,7 +51,7 @@ public class UserService {
         user.setMomosAttributes(momoAttributeService.generateInitialMomoAttributes());
         try {
             userRepository.save(user);
-            return new ResponseEntity<>(generateDTOFromUser(user), HttpStatus.OK);
+            return new ResponseEntity<>(generateDTOFromUser(user), HttpStatus.CREATED);
         } catch (DuplicateKeyException e) {
             throw new EntityExistsException("user-service.create-user.user.name.already-in-use");
         } catch (RuntimeException e) {
